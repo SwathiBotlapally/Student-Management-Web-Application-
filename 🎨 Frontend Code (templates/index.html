@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+</head>
+<body>
+    <h2>Task Management App</h2>
+    <form method="POST">
+        <input type="text" name="task" placeholder="Enter task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task['task'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
